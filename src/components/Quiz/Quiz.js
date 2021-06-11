@@ -33,7 +33,7 @@ const Quiz = ({
         Country quiz <ImageHeader src={adventure} alt="adventure" />
       </Title>
       <ContainerQuestion>
-        {question.type === "flag" ? (
+        {answer && question.type === "flag" ? (
           <>
             <Flag src={answer.flag} alt="flag" />
             <Question>{question.description}</Question>

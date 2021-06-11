@@ -33,7 +33,7 @@ function App() {
     if (keepGoing && correctAnswer.correct) {
       setTimeout(() => {
         countriesRandom();
-      }, 1500);
+      }, 1300);
     }
   }, [correctAnswer]);
 
@@ -49,22 +49,15 @@ function App() {
 
       setQuestion(questionsType[randomNumber(0, 2)]);
 
-      if (answersRandom.length === 0) {
-        setAnswersRandom([
-          ...answersRandom,
-          data[randomNumber(1, 250)],
-          data[randomNumber(1, 250)],
-          data[randomNumber(1, 250)],
-          data[randomNumber(1, 250)],
-        ]);
-      } else if (keepGoing) {
+      setAnswersRandom([
+        data[randomNumber(1, 250)],
+        data[randomNumber(1, 250)],
+        data[randomNumber(1, 250)],
+        data[randomNumber(1, 250)],
+      ]);
+
+      if (keepGoing) {
         setKeepGoing(false);
-        setAnswersRandom([
-          data[randomNumber(1, 250)],
-          data[randomNumber(1, 250)],
-          data[randomNumber(1, 250)],
-          data[randomNumber(1, 250)],
-        ]);
       }
       setIsLoading(false);
     } catch (error) {
