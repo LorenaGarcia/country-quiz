@@ -51,9 +51,9 @@ function App() {
 
       setAnswersRandom([
         data[randomNumber(1, 250)],
-        data[randomNumber(1, 250)],
-        data[randomNumber(1, 250)],
-        data[randomNumber(1, 250)],
+        data[randomNumber(1, 240)],
+        data[randomNumber(1, 230)],
+        data[randomNumber(1, 220)],
       ]);
 
       if (keepGoing) {
